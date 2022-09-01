@@ -1,5 +1,5 @@
 schedules:
-- cron: "16 10 * * THU"
+- cron: "30 10 * * THU"
   displayName: every thursdays
   branches:
     include:
@@ -12,12 +12,4 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: releaseorchestrator@2
-  inputs:
-    endpointType: 'integrated'
-    projectName: 'Releasezap'
-    definitionName: 'New release pipeline'
-    releaseStrategy: 'latest'
-    releaseStage: 'Securitytesting'
-    approvalRetry: 60
-    updateInterval: 5
+
