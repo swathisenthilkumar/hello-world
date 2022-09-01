@@ -1,0 +1,23 @@
+schedules:
+- cron: "40 9 * * THU"
+  displayName: every thursdays
+  branches:
+    include:
+    - master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: releaseorchestrator@2
+  inputs:
+    endpointType: 'integrated'
+    projectName: 'Releasezap'
+    definitionName: 'New release pipeline'
+    releaseStrategy: 'create'
+    definitionStage: 'Securitytesting'
+    approvalRetry: 60
+    updateInterval: 5
