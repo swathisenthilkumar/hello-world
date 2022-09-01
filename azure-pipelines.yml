@@ -1,5 +1,5 @@
 schedules:
-- cron: "40 9 * * THU"
+- cron: "16 10 * * THU"
   displayName: every thursdays
   branches:
     include:
@@ -17,7 +17,7 @@ steps:
     endpointType: 'integrated'
     projectName: 'Releasezap'
     definitionName: 'New release pipeline'
-    releaseStrategy: 'create'
-    definitionStage: 'Securitytesting'
+    releaseStrategy: 'latest'
+    releaseStage: 'Securitytesting'
     approvalRetry: 60
     updateInterval: 5
