@@ -1,5 +1,5 @@
 schedules:
-- cron: "45 8 * * FRI"
+- cron: "55 8 * * FRI"
   displayName: every Fridays every 5 mins
   branches:
     include:
