@@ -1,6 +1,6 @@
 schedules:
-- cron: "0 10,11,12,13 * * THU"
-  displayName: every thursdays
+- cron: "0 */5 * * FRI"
+  displayName: every Fridays every 5 mins
   branches:
     include:
     - master
