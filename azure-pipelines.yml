@@ -1,5 +1,5 @@
 schedules:
-- cron: "30 10 * * *"
+- cron: "30 5 * * *"
   displayName: every Fridays every 5 mins
   branches:
     include:
