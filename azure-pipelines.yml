@@ -1,6 +1,7 @@
 schedules:
 - cron: "30 5 * * *"
-  displayName: every Fridays every 5 mins
+  always: true
+  displayName: Running on UTC time
   branches:
     include:
     - master
